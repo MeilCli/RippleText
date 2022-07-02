@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textRipple" format="reference" />
+
+    <declare-styleable name="RippleTextView">
+        <attr name="textRipple" />
+    </declare-styleable>
+</resources>

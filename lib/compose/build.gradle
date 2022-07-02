@@ -1,0 +1,25 @@
+import net.meilcli.rippletext.gradle.dependencies.Android
+import net.meilcli.rippletext.gradle.dependencies.Kotlin
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'AndroidLibraryPlugin'
+
+android {
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+    }
+}
+
+
+dependencies {
+    api Android.composeUi
+    api Android.composeUiTooling
+    api Android.composeFoundation
+    api Android.composeMaterial
+    api Kotlin.coroutinesCore
+    api Kotlin.coroutinesAndroid
+}

@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "RippleText"
+include ':app'
+include ':lib:core'
+include ':lib:appcompat'
+include ':lib:emoji'
+include ':lib:emoji-appcompat'
+include ':lib:emoji2-views'
+include ':lib:compose'

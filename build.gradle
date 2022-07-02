@@ -1,0 +1,18 @@
+import net.meilcli.rippletext.gradle.dependencies.*
+
+buildscript {
+    repositories {
+        google()
+        maven { url Repositories.gradle }
+    }
+    dependencies {
+        classpath Android.gradle
+        classpath Kotlin.gradle
+        classpath Dokka.plugin
+        classpath Gmazzo.gradleBuildConfigPlugin
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

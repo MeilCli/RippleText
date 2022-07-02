@@ -1,0 +1,11 @@
+import net.meilcli.rippletext.gradle.dependencies.Android
+
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'AndroidLibraryPlugin'
+
+dependencies {
+    api Android.emoji2Views
+
+    api project(':lib:core')
+}

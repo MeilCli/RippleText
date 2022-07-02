@@ -1,0 +1,64 @@
+import net.meilcli.rippletext.gradle.dependencies.Android
+import net.meilcli.rippletext.gradle.dependencies.Google
+import net.meilcli.rippletext.gradle.dependencies.Junit4
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "net.meilcli.rippletext.app"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=all-compatibility']
+    }
+}
+
+dependencies {
+    implementation Android.core
+    implementation Android.appCompat
+    implementation Android.recyclerView
+    implementation Android.constraintlayout
+    implementation Android.activityCompose
+    implementation Android.composeUi
+    implementation Android.composeUiTooling
+    implementation Android.composeFoundation
+    implementation Android.composeMaterial
+    implementation Google.material
+    implementation Google.materialComposeThemeAdapter
+
+    implementation project(':lib:core')
+    implementation project(':lib:compose')
+
+    testImplementation Junit4.junit
+    androidTestImplementation Android.junit
+    androidTestImplementation Android.espresso
+}
