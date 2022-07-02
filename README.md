@@ -12,6 +12,7 @@ TBD
 ### Android View
 Usage is easily, replace your text view at xml
 - TextView -> `net.meilcli.rippletext.RippleTextView`
+  - RippleTextView is for usage of OS implementation text view, so recommend to use RippleAppCompatTextView
 - AppCompatTextView -> `net.meilcli.rippletext.appcompat.RippleAppCompatTextView`
 - EmojiTextView -> `net.meilcli.rippletext.emoji.RippleEmojiTextView`
 - EmojiTextView(emoji2) -> `net.meilcli.rippletext.emoji2.views.RippleEmojiTextView`
