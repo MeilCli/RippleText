@@ -27,5 +27,5 @@ jobs:
       - name: Encode gpg
         run: echo -n "$SIGNING_RING" | base64 --decode > private.gpg
       - name: echo signing.properties
-        run: echo -e "signing.keyId=${SIGNING_KEY_ID}\nsigning.password=${SIGNING_PASSWORD}\nsigning.secretKeyRingFile=./private.gpg\nsonatypeUsername=${SONATYPE_USERNAME}\nsonatypePassword=${SONATYPE_PASSWORD}" > buildSrc/signing.properties
+        run: echo -e "signing.keyId=${SIGNING_KEY_ID}\nsigning.password=${SIGNING_PASSWORD}\nsigning.secretKeyRingFile=${GITHUB_WORKSPACE}/private.gpg\nsonatypeUsername=${SONATYPE_USERNAME}\nsonatypePassword=${SONATYPE_PASSWORD}" > buildSrc/signing.properties
       - run: ./gradlew publishCentralPublicationToCentralRepository
