@@ -34,8 +34,8 @@ Usage is easily, replace your text view at xml
   - RippleTextView is for usage of OS implementation text view, so recommend to use RippleAppCompatTextView
 - AppCompatTextView -> `net.meilcli.rippletext.appcompat.RippleAppCompatTextView`
 - EmojiTextView -> `net.meilcli.rippletext.emoji.RippleEmojiTextView`
+- EmojiAppCompatTextView -> `net.meilcli.rippletext.emoji.appcompat.RippleEmojiAppCompatTextView`
 - EmojiTextView(emoji2) -> `net.meilcli.rippletext.emoji2.views.RippleEmojiTextView`
-- EmojiAppCompatTextView(emoji2) -> `net.meilcli.rippletext.emoji.appcompat.RippleEmojiAppCompatTextView`
 
 #### Customization
 *Change ripple drawable*
