@@ -132,3 +132,10 @@ private fun Sample() {
 
 ## License
 MIT License
+
+### Usings
+- [Kotlin Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
+- [AndroidX](https://github.com/androidx/androidx)
+- Material Components
+  - https://github.com/material-components/material-components-android
+  - https://github.com/material-components/material-components-android-compose-theme-adapter
