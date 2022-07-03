@@ -6,7 +6,26 @@ Ripple effect for clickable text on android view and composable function
 |<video src="https://user-images.githubusercontent.com/2821921/176992575-4cd57cde-9b54-455d-8734-462efba3c7f2.mp4" />|<video src="https://user-images.githubusercontent.com/2821921/176992580-090c9d8e-3762-4923-8c4c-7d870c164896.mp4" />|
 
 ## Installation
-TBD
+RippleText is published to MavenCentral.
+
+### Android View
+```groovy
+dependencies {
+    // you can select artifact by your text view kind
+    implementation "net.meilcli.rippletext:core:0.0.1"
+    implementation "net.meilcli.rippletext:appcompat:0.0.1"
+    implementation "net.meilcli.rippletext:emoji:0.0.1"
+    implementation "net.meilcli.rippletext:emoji-appcompat:0.0.1"
+    implementation "net.meilcli.rippletext:emoji2-views:0.0.1"
+}
+```
+
+### Composable function
+```groovy
+dependencies {
+    implementation "net.meilcli.rippletext:compose:0.0.1"
+}
+```
 
 ## Usage
 ### Android View
