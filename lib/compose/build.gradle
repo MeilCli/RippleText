@@ -4,6 +4,8 @@ import net.meilcli.rippletext.gradle.dependencies.Kotlin
 apply plugin: 'com.android.library'
 apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'AndroidLibraryPlugin'
+apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'DokkaPlugin'
 
 android {
     buildFeatures {
