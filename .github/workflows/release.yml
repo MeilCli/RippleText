@@ -27,7 +27,7 @@ jobs:
       - name: Encode gpg
         run: echo -n "$SIGNING_RING" | base64 --decode > private.gpg
       - name: Test
-        run: echo "text=${TEST_ENV}%0Atext2=${TEST_ENV}" > buildSrc/test.properties
+        run: echo -e "text=${TEST_ENV}\nAtext2=${TEST_ENV}" > buildSrc/test.properties
         env:
           TEST_ENV: "test_env"
       - name: Test Dump
