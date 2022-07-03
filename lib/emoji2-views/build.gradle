@@ -5,6 +5,9 @@ apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'AndroidLibraryPlugin'
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'DokkaPlugin'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+apply plugin: 'MavenPublishPlugin'
 
 dependencies {
     api Android.emoji2Views
