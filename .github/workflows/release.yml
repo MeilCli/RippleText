@@ -26,12 +26,6 @@ jobs:
           tag: ${{ github.event.release.tag_name }}
       - name: Encode gpg
         run: echo -n "$SIGNING_RING" | base64 --decode > private.gpg
-      - name: Test
-        run: echo -e "text=${TEST_ENV}\nAtext2=${TEST_ENV}" > buildSrc/test.properties
-        env:
-          TEST_ENV: "test_env"
-      - name: Test Dump
-        run: cat buildSrc/test.properties
       - name: echo signing.properties
-        run: echo "signing.keyId=${SIGNING_KEY_ID}%0Asigning.password=${SIGNING_PASSWORD}%0Asigning.secretKeyRingFile=private.gpg%0AsonatypeUsername=${SONATYPE_USERNAME}%0AsonatypePassword=${SONATYPE_PASSWORD}" > buildSrc/signing.properties
+        run: echo -e "signing.keyId=${SIGNING_KEY_ID}\nsigning.password=${SIGNING_PASSWORD}\nsigning.secretKeyRingFile=private.gpg\nsonatypeUsername=${SONATYPE_USERNAME}\nsonatypePassword=${SONATYPE_PASSWORD}" > buildSrc/signing.properties
       - run: ./gradlew publishCentralPublicationToCentralRepository
